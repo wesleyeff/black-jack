@@ -22,5 +22,10 @@ namespace WpfApplication4
         {
             InitializeComponent();
         }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
