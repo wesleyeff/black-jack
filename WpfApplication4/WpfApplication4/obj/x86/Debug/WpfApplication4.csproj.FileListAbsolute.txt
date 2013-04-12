@@ -1,0 +1,26 @@
+c:\users\nathan\documents\visual studio 2010\Projects\WpfApplication4\WpfApplication4\bin\Debug\WpfApplication4.exe
+c:\users\nathan\documents\visual studio 2010\Projects\WpfApplication4\WpfApplication4\bin\Debug\WpfApplication4.pdb
+c:\users\nathan\documents\visual studio 2010\Projects\WpfApplication4\WpfApplication4\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\nathan\documents\visual studio 2010\Projects\WpfApplication4\WpfApplication4\obj\x86\Debug\MainWindow.baml
+c:\users\nathan\documents\visual studio 2010\Projects\WpfApplication4\WpfApplication4\obj\x86\Debug\MainWindow.g.cs
+c:\users\nathan\documents\visual studio 2010\Projects\WpfApplication4\WpfApplication4\obj\x86\Debug\App.g.cs
+c:\users\nathan\documents\visual studio 2010\Projects\WpfApplication4\WpfApplication4\obj\x86\Debug\WpfApplication4_MarkupCompile.cache
+c:\users\nathan\documents\visual studio 2010\Projects\WpfApplication4\WpfApplication4\obj\x86\Debug\WpfApplication4.g.resources
+c:\users\nathan\documents\visual studio 2010\Projects\WpfApplication4\WpfApplication4\obj\x86\Debug\WpfApplication4.Properties.Resources.resources
+c:\users\nathan\documents\visual studio 2010\Projects\WpfApplication4\WpfApplication4\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\nathan\documents\visual studio 2010\Projects\WpfApplication4\WpfApplication4\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\nathan\documents\visual studio 2010\Projects\WpfApplication4\WpfApplication4\obj\x86\Debug\WpfApplication4.exe
+c:\users\nathan\documents\visual studio 2010\Projects\WpfApplication4\WpfApplication4\obj\x86\Debug\WpfApplication4.pdb
+C:\Users\Wesley\Desktop\WpfApplication4\WpfApplication4\obj\x86\Debug\WpfApplication4.exe
+C:\Users\Wesley\Desktop\WpfApplication4\WpfApplication4\obj\x86\Debug\WpfApplication4.pdb
+C:\Users\Wesley\Desktop\WpfApplication4\WpfApplication4\bin\Debug\WpfApplication4.exe
+C:\Users\Wesley\Desktop\WpfApplication4\WpfApplication4\bin\Debug\WpfApplication4.pdb
+C:\Users\Wesley\Desktop\WpfApplication4\WpfApplication4\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Wesley\Desktop\WpfApplication4\WpfApplication4\obj\x86\Debug\MainWindow.baml
+C:\Users\Wesley\Desktop\WpfApplication4\WpfApplication4\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Wesley\Desktop\WpfApplication4\WpfApplication4\obj\x86\Debug\App.g.cs
+C:\Users\Wesley\Desktop\WpfApplication4\WpfApplication4\obj\x86\Debug\WpfApplication4_MarkupCompile.cache
+C:\Users\Wesley\Desktop\WpfApplication4\WpfApplication4\obj\x86\Debug\WpfApplication4.g.resources
+C:\Users\Wesley\Desktop\WpfApplication4\WpfApplication4\obj\x86\Debug\WpfApplication4.Properties.Resources.resources
+C:\Users\Wesley\Desktop\WpfApplication4\WpfApplication4\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Wesley\Desktop\WpfApplication4\WpfApplication4\obj\x86\Debug\GenerateResource.write.1.tlog
