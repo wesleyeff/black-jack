@@ -26,7 +26,8 @@ namespace WpfApplication4
         private void button3_Click(object sender, RoutedEventArgs e)
         {
             var newWindow = new Options();
-            newWindow.Show();
+            newWindow.Owner = this;
+            newWindow.ShowDialog();
         }
     }
 }
