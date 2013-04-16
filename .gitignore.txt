@@ -1,2 +1,0 @@
-WpfApplication4/WpfApplication4/bin/
-WpfApplication4/WpfApplication4/obj/
