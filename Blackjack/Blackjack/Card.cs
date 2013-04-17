@@ -1,16 +1,9 @@
-﻿/**
- * 
- * Darrel Portzline
- * A03 - Cards
- * 2/6/2013
- * 
- * */
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-//hello
-namespace Cards
+
+namespace Blackjack
 {
   public enum Suit { Spades = 9824, Clubs = 9827, Hearts = 9829, Diamonds = 9830 }
 

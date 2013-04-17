@@ -1,33 +1,34 @@
-﻿/**
- * 
- * Darrel Portzline hi
- * A03 - Cards
- * 2/6/2013
- * 
- * */
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Cards
+namespace Blackjack
 {
   public class Deck
   {
     public List<Card> Cards { get; private set; }
 
+    public List<Card> DiscardPile { get; private set; }
+
     public Deck()
     {
       Cards = NewDeck();
+      DiscardPile = new List<Card>();
     }
 
     public Deck(List<Card> c)
     {
       Cards = c;
+      DiscardPile = new List<Card>();
     }
 
     public void Shuffle()
     {
+      // put the discard pile back into the deck and shuffle
+      Cards.AddRange(DiscardPile);
+      DiscardPile.Clear();
+
       Card temp;
       int next;
       Random r = new Random();
@@ -53,6 +54,10 @@ namespace Cards
         Cards.RemoveAt(0);
       }
       return hand;
+    }
+
+    public void Discard(List<Card> cards) {
+      DiscardPile.AddRange(cards);
     }
 
     public static List<Card> NewDeck()
