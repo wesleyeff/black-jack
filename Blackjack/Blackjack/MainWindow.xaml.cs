@@ -35,5 +35,13 @@ namespace Blackjack
             newWindow.Owner = this;
             newWindow.ShowDialog();
         }
+
+        // Rules click event
+        private void rules_Click(object sender, RoutedEventArgs e)
+        {
+            var rulesWindow = new Rules();
+            rulesWindow.Owner = this;
+            rulesWindow.ShowDialog();
+        }
     }
 }

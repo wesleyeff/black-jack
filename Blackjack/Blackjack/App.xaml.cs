@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Windows;
 
-namespace WpfApplication4
+namespace Blackjack
 {
     /// <summary>
     /// Interaction logic for App.xaml
