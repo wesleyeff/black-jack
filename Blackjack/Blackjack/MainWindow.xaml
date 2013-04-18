@@ -1,4 +1,4 @@
-﻿<Window x:Class="WpfApplication4.MainWindow"
+﻿<Window x:Class="Blackjack.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="BlackJack" Height="528" Width="707" WindowStyle="ThreeDBorderWindow" WindowState="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" Icon="/WpfApplication4;component/BlackJack.ico" ResizeMode="CanMinimize">

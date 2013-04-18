@@ -1,11 +1,4 @@
-﻿/**
- * 
- * Darrel Portzline
- * A03 - Cards
- * 2/6/2013
- * 
- * */
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +13,37 @@ namespace Blackjack
     {
       newHand.Sort();
       Cards = newHand;
+    }
+
+    public int GetPoints()
+    {
+      int total = 0;
+      foreach (Card c in Cards)
+      {
+        if ((int)c.Rank >= 10)
+          total += 10;
+        else if (c.Rank == Rank.Ace)
+          total += 11;
+        else
+          total += (int)c.Rank;
+      }
+      if (total <= 21)
+        return total;
+      int aces = Cards.Where(c => c.Rank == Rank.Ace).Count();
+      if (aces > 0)
+      {
+        while (total > 21 && aces > 0)
+        {
+          total -= 10;
+          aces--;
+        }
+      }
+      return total;
+    }
+
+    public void Add(List<Card> cards)
+    {
+      Cards.AddRange(cards);
     }
 
     public bool IsFlush()

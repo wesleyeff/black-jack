@@ -11,7 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WpfApplication4
+namespace Blackjack
 {
     /// <summary>
     /// Interaction logic for Options.xaml
@@ -21,6 +21,12 @@ namespace WpfApplication4
         public MainWindow()
         {
             InitializeComponent();
+            Hand test = new Hand(new List<Card>() {
+              new Card(Rank.Ace, Suit.Clubs),
+              new Card(Rank.Ten, Suit.Clubs),
+              new Card(Rank.Deuce, Suit.Clubs)
+            });
+            int total = test.GetPoints();
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)
