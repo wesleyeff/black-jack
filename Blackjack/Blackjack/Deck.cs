@@ -9,7 +9,7 @@ namespace Blackjack
   {
     public List<Card> Cards { get; private set; }
 
-    public List<Card> DiscardPile { get; private set; }
+    private List<Card> DiscardPile { get; set; }
 
     public Deck()
     {

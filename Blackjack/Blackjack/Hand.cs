@@ -9,6 +9,11 @@ namespace Blackjack
   {
     public List<Card> Cards { get; private set; }
 
+    public Hand()
+    {
+      Cards = new List<Card>();
+    }
+
     public Hand(List<Card> newHand)
     {
       newHand.Sort();
@@ -44,6 +49,12 @@ namespace Blackjack
     public void Add(List<Card> cards)
     {
       Cards.AddRange(cards);
+    }
+
+    public void Discard(Deck deck)
+    {
+      deck.Discard(Cards);
+      Cards.Clear();
     }
 
     public bool IsFlush()
