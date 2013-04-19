@@ -62,7 +62,8 @@ namespace Blackjack
 
         private void HitButton_Click(object sender, RoutedEventArgs e)
         {
-
+          human.Hand.Add(deck.Deal(1));
+          //TODO: do something to display the new card to user
         }
     }
 }
