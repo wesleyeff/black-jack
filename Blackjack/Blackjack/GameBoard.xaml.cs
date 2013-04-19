@@ -26,7 +26,8 @@ namespace Blackjack
 
         private void button4_Click(object sender, RoutedEventArgs e)
         {
-            
+            var welcome_screen = new WelcomeScreen();
+            Application.Current.MainWindow.Content = welcome_screen;
         }
     }
 }

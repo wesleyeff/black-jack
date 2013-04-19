@@ -18,36 +18,13 @@ namespace Blackjack
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
-            Hand test = new Hand(new List<Card>() {
-              new Card(Rank.Ace, Suit.Clubs),
-              new Card(Rank.Ten, Suit.Clubs),
-              new Card(Rank.Deuce, Suit.Clubs)
-            });
-            int total = test.GetPoints();
+            var welcome_screen = new WelcomeScreen();
+            this.Content = welcome_screen;
         }
 
-        private void button3_Click(object sender, RoutedEventArgs e)
-        {
-            var newWindow = new Options();
-            newWindow.Owner = this;
-            newWindow.ShowDialog();
-        }
-
-        // Rules click event
-        private void rules_Click(object sender, RoutedEventArgs e)
-        {
-            var rulesWindow = new Rules();
-            rulesWindow.Owner = this;
-            rulesWindow.ShowDialog();
-        }
-
-        private void game_board_Click(object sender, RoutedEventArgs e)
-        {
-            var gameBoardPage = new GameBoard();
-            this.Content = gameBoardPage;
-        }
     }
 }
