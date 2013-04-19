@@ -43,5 +43,11 @@ namespace Blackjack
             rulesWindow.Owner = this;
             rulesWindow.ShowDialog();
         }
+
+        private void game_board_Click(object sender, RoutedEventArgs e)
+        {
+            var gameBoardPage = new GameBoard();
+            this.Content = gameBoardPage;
+        }
     }
 }
