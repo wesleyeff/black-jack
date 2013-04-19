@@ -20,8 +20,7 @@ namespace Blackjack
     {
       Rank = rank;
       Suit = suit;
-      //TODO: this needs to be changed to the path of the image once we have the images.
-      Path = "Images/Cards/";
+      Path = "Images/Cards/" + suit + "-" + rank + ".png";
     }
 
     public override string ToString()
@@ -31,8 +30,10 @@ namespace Blackjack
 
     public int CompareTo(Card c)
     {
-      if (this.Rank == c.Rank)
-        return this.Suit.CompareTo(c.Suit);
+      //For now, just compare the ranks of the two cards, because that's all that matters in Blackjack
+
+      //if (this.Rank == c.Rank)
+      //  return this.Suit.CompareTo(c.Suit);
       return this.Rank.CompareTo(c.Rank);
     }
   }

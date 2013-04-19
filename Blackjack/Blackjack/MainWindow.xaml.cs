@@ -25,6 +25,5 @@ namespace Blackjack
             var welcome_screen = new WelcomeScreen();
             this.Content = welcome_screen;
         }
-
     }
 }

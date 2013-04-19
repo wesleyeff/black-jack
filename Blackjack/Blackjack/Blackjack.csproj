@@ -135,19 +135,19 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Resource Include="Images\Cards\Clubes-Eight.png">
+    <Resource Include="Images\Cards\Clubs-Eight.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\Cards\Clubes-King.png">
+    <Resource Include="Images\Cards\Clubs-King.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\Cards\Clubes-Nine.png">
+    <Resource Include="Images\Cards\Clubs-Nine.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\Cards\Clubes-Queen.png">
+    <Resource Include="Images\Cards\Clubs-Queen.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\Cards\Clubes-Ten.png">
+    <Resource Include="Images\Cards\Clubs-Ten.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Cards\Clubs-Ace.png">
@@ -171,7 +171,7 @@
     <Resource Include="Images\Cards\Clubs-Three.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\Cards\Clubs-Two.png">
+    <Resource Include="Images\Cards\Clubs-Deuce.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Cards\Diamonds-Ace.png">
@@ -210,7 +210,7 @@
     <Resource Include="Images\Cards\Diamonds-Three.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\Cards\Diamonds-Two.png">
+    <Resource Include="Images\Cards\Diamonds-Deuce.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Cards\Hearts-Ace.png">
@@ -249,7 +249,7 @@
     <Resource Include="Images\Cards\Hearts-Three.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\Cards\Hearts-Two.png">
+    <Resource Include="Images\Cards\Hearts-Deuce.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Cards\Spades-Ace.png">
@@ -288,7 +288,7 @@
     <Resource Include="Images\Cards\Spades-Three.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\Cards\Spades-Two.png">
+    <Resource Include="Images\Cards\Spades-Deuce.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
