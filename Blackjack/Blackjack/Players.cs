@@ -35,6 +35,21 @@ namespace Blackjack
   {
     public Human(Hand hand) : base(hand) { }
     //TODO: needs a bank property
+    public int Bank { get; set; }
+
+    public void updateBank(int bet, bool isBlackJack)
+    {
+        if (isBlackJack)
+        {
+            this.Bank = this.Bank + (bet * 2);
+
+        }
+        else
+        {
+            this.Bank = this.Bank + bet;
+        }
+
+    }
 
     //TODO: this needs to be implemented once we have a Bank class
     public void Bet(int amount)
