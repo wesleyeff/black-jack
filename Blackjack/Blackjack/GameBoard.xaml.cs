@@ -32,7 +32,6 @@ namespace Blackjack
           deck.Shuffle();
           dealer = new Dealer(new Hand());
           human = new Human(new Hand());
-          human.Bank = 500;
 
           //disable some buttons until hand is dealt
           HitButton.IsEnabled = false;
