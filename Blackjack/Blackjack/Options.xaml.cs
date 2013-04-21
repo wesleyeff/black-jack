@@ -30,7 +30,11 @@ namespace Blackjack
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("decks = "+decks+"\nsoftdeal = "+ softdeal+"\ntie = "+tie );
+         //   MessageBox.Show("decks = "+decks+"\nsoftdeal = "+ softdeal+"\ntie = "+tie );
+            MainWindow.decks = decks;
+            MainWindow.softdeal = softdeal;
+            MainWindow.tie = tie;
+            this.Close();
         }
 
         private void radioButton1_Checked_1(object sender, RoutedEventArgs e)
@@ -71,6 +75,17 @@ namespace Blackjack
         private void radioButton8_Checked(object sender, RoutedEventArgs e)
         {
             decks = 5;
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            radioButton1.IsChecked = true;
+            radioButton4.IsChecked = true;
+            radioButton6.IsChecked = true;
+            MainWindow.decks = decks;
+            MainWindow.softdeal = softdeal;
+            MainWindow.tie = tie;
+            this.Close();
         }
 
        
