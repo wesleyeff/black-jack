@@ -1,0 +1,20 @@
+﻿<Window x:Class="Blackjack.Rules"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Rules" Height="550" Width="555" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterOwner" Icon="/Blackjack;component/BlackJack.ico" ShowInTaskbar="False">
+    <Grid Background="DarkGreen">
+        <TextBlock Margin="207,0,217,0" Name="textBlock1" Text="Rules" FontSize="40" Height="55" VerticalAlignment="Top" />
+        <TextBlock Margin="20,61,20,107" TextWrapping="Wrap">
+            <TextBlock.Text>
+            After receiving an initial two cards, the player has up to four standard options: "hit," "stand," "double down," or "split".&#x0a;
+Hit: Take another card from the dealer.
+
+Stand: Take no more cards; also known as "stand pat", "stick", or "stay".
+
+Double down The player is allowed to increase the initial bet by up to 100% in exchange for committing to stand after receiving exactly one more card. The additional bet is placed in the betting box next to the original bet. Some games do not permit the player to increase the bet by amounts other than 100%. Non-controlling players may double their wager or decline to do so, but they are bound by the controlling player's decision to take only one card.
+
+Split (only available as first decision of a hand): If the first two cards have the same value, the player can split them into two hands, by moving a second bet equal to the first into an area outside the betting box of the original bet. The dealer separates the two cards and draws a further card on each, placing one bet with each hand. The player then plays out the two separate hands in turn, with some restrictions. Occasionally, in the case of ten-valued cards, some casinos allow splitting only when the cards have the identical ranks; for instance, a hand of T-T may be split, but not of T-K. However, usually all ten-value cards are treated the same. Doubling and further splitting of post-split hands may be restricted, and blackjacks after a split are counted as non-blackjack 21 when comparing against the dealer's hand. Hitting split aces is usually not allowed. Non-controlling players may follow the controlling player by putting down an additional bet, or decline to do so, instead associating their existing wager with one of the two post-split hands. In that case they must choose which hand to play behind before the second cards are drawn.
+        </TextBlock.Text>
+        </TextBlock>
+    </Grid>
+</Window>
