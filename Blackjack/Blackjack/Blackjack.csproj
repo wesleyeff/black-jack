@@ -128,169 +128,173 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\blackjack-logo-big.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="BlackJack.ico" />
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <Resource Include="Images\Cards\Clubs-Eight.png">
+    <Resource Include="Images\blackjack-logo-big.jpg" />
+    <Content Include="Images\Cards\Card-Back.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Clubs-King.png">
+    </Content>
+    <Content Include="Images\Cards\Card-Left.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Clubs-Nine.png">
+    </Content>
+    <Content Include="Images\Cards\Card-Right.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Clubs-Queen.png">
+    </Content>
+    <Content Include="Images\Cards\Clubs-Ace.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Clubs-Ten.png">
+    </Content>
+    <Content Include="Images\Cards\Clubs-Deuce.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Clubs-Ace.png">
+    </Content>
+    <Content Include="Images\Cards\Clubs-Eight.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Clubs-Five.png">
+    </Content>
+    <Content Include="Images\Cards\Clubs-Five.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Clubs-Four.png">
+    </Content>
+    <Content Include="Images\Cards\Clubs-Four.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Clubs-Jack.png">
+    </Content>
+    <Content Include="Images\Cards\Clubs-Jack.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Clubs-Seven.png">
+    </Content>
+    <Content Include="Images\Cards\Clubs-King.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Clubs-Six.png">
+    </Content>
+    <Content Include="Images\Cards\Clubs-Nine.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Clubs-Three.png">
+    </Content>
+    <Content Include="Images\Cards\Clubs-Queen.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Clubs-Deuce.png">
+    </Content>
+    <Content Include="Images\Cards\Clubs-Seven.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Diamonds-Ace.png">
+    </Content>
+    <Content Include="Images\Cards\Clubs-Six.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Diamonds-Eight.png">
+    </Content>
+    <Content Include="Images\Cards\Clubs-Ten.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Diamonds-Five.png">
+    </Content>
+    <Content Include="Images\Cards\Clubs-Three.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Diamonds-Four.png">
+    </Content>
+    <Content Include="Images\Cards\Diamonds-Ace.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Diamonds-Jack.png">
+    </Content>
+    <Content Include="Images\Cards\Diamonds-Deuce.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Diamonds-King.png">
+    </Content>
+    <Content Include="Images\Cards\Diamonds-Eight.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Diamonds-Nine.png">
+    </Content>
+    <Content Include="Images\Cards\Diamonds-Five.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Diamonds-Queen.png">
+    </Content>
+    <Content Include="Images\Cards\Diamonds-Four.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Diamonds-Seven.png">
+    </Content>
+    <Content Include="Images\Cards\Diamonds-Jack.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Diamonds-Six.png">
+    </Content>
+    <Content Include="Images\Cards\Diamonds-King.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Diamonds-Ten.png">
+    </Content>
+    <Content Include="Images\Cards\Diamonds-Nine.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Diamonds-Three.png">
+    </Content>
+    <Content Include="Images\Cards\Diamonds-Queen.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Diamonds-Deuce.png">
+    </Content>
+    <Content Include="Images\Cards\Diamonds-Seven.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Hearts-Ace.png">
+    </Content>
+    <Content Include="Images\Cards\Diamonds-Six.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Hearts-Eight.png">
+    </Content>
+    <Content Include="Images\Cards\Diamonds-Ten.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Hearts-Five.png">
+    </Content>
+    <Content Include="Images\Cards\Diamonds-Three.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Hearts-Four.png">
+    </Content>
+    <Content Include="Images\Cards\Hearts-Ace.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Hearts-Jack.png">
+    </Content>
+    <Content Include="Images\Cards\Hearts-Deuce.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Hearts-King.png">
+    </Content>
+    <Content Include="Images\Cards\Hearts-Eight.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Hearts-Nine.png">
+    </Content>
+    <Content Include="Images\Cards\Hearts-Five.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Hearts-Queen.png">
+    </Content>
+    <Content Include="Images\Cards\Hearts-Four.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Hearts-Seven.png">
+    </Content>
+    <Content Include="Images\Cards\Hearts-Jack.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Hearts-Six.png">
+    </Content>
+    <Content Include="Images\Cards\Hearts-King.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Hearts-Ten.png">
+    </Content>
+    <Content Include="Images\Cards\Hearts-Nine.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Hearts-Three.png">
+    </Content>
+    <Content Include="Images\Cards\Hearts-Queen.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Hearts-Deuce.png">
+    </Content>
+    <Content Include="Images\Cards\Hearts-Seven.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Spades-Ace.png">
+    </Content>
+    <Content Include="Images\Cards\Hearts-Six.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Spades-Eight.png">
+    </Content>
+    <Content Include="Images\Cards\Hearts-Ten.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Spades-Five.png">
+    </Content>
+    <Content Include="Images\Cards\Hearts-Three.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Spades-Four.png">
+    </Content>
+    <Content Include="Images\Cards\Spades-Ace.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Spades-Jack.png">
+    </Content>
+    <Content Include="Images\Cards\Spades-Deuce.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Spades-King.png">
+    </Content>
+    <Content Include="Images\Cards\Spades-Eight.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Spades-Nine.png">
+    </Content>
+    <Content Include="Images\Cards\Spades-Five.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Spades-Queen.png">
+    </Content>
+    <Content Include="Images\Cards\Spades-Four.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Spades-Seven.png">
+    </Content>
+    <Content Include="Images\Cards\Spades-Jack.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Spades-Six.png">
+    </Content>
+    <Content Include="Images\Cards\Spades-King.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Spades-Ten.png">
+    </Content>
+    <Content Include="Images\Cards\Spades-Nine.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Spades-Three.png">
+    </Content>
+    <Content Include="Images\Cards\Spades-Queen.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Cards\Spades-Deuce.png">
+    </Content>
+    <Content Include="Images\Cards\Spades-Seven.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
+    </Content>
+    <Content Include="Images\Cards\Spades-Six.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\Spades-Ten.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\Spades-Three.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -87,8 +87,5 @@ namespace Blackjack
             MainWindow.tie = tie;
             this.Close();
         }
-
-       
-
     }
 }
