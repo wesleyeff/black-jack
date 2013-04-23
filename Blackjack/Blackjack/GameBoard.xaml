@@ -8,14 +8,18 @@
 	Title="GameBoard">
 
   <Grid Background="DarkGreen">
-    <Button Content="Deal" Height="35" HorizontalAlignment="Left" Margin="286,424,0,0" Name="DealButton" VerticalAlignment="Top" Width="75" Click="DealButton_Click" />
-    <Button Content="Hit" Height="35" HorizontalAlignment="Left" Margin="391,424,0,0" Name="HitButton" VerticalAlignment="Top" Width="75" Click="HitButton_Click" />
-    <Button Content="Stand" Height="35" HorizontalAlignment="Left" Margin="491,424,0,0" Name="StandButton" VerticalAlignment="Top" Width="75" />
+    <Button Content="Deal" Height="35" HorizontalAlignment="Left" Margin="286,456,0,0" Name="DealButton" VerticalAlignment="Top" Width="75" Click="DealButton_Click" />
+    <Button Content="Hit" Height="35" HorizontalAlignment="Left" Margin="391,456,0,0" Name="HitButton" VerticalAlignment="Top" Width="75" Click="HitButton_Click" />
+    <Button Content="Stand" Height="35" HorizontalAlignment="Left" Margin="491,456,0,0" Name="StandButton" VerticalAlignment="Top" Width="75" Click="StandButton_Click" />
     <Button Content="Exit" Height="25" HorizontalAlignment="Left" Margin="10,10,0,0" Name="ExitButton" VerticalAlignment="Top" Width="41" Click="ExitButton_Click" />
-    <Grid Width="600">
-      <StackPanel Height="100" HorizontalAlignment="Center" Width="Auto" Margin="0,305,0,0" Name="HumanPanel" VerticalAlignment="Top" Orientation="Horizontal" />
-      <StackPanel Height="100" HorizontalAlignment="Center" Width="Auto" Margin="0,80,0,0" Name="DealerPanel" VerticalAlignment="Top" Orientation="Horizontal" />
+    <Grid Width="600" VerticalAlignment="Center" Height="347" Margin="0,71,0,82">
+      <StackPanel Height="100" HorizontalAlignment="Center" Width="Auto" Name="HumanPanel" VerticalAlignment="Bottom" Orientation="Horizontal" />
+      <StackPanel Height="100" HorizontalAlignment="Center" Width="Auto" Name="DealerPanel" VerticalAlignment="Top" Orientation="Horizontal" />
+      <Label Content="Bet Amount:" Height="28" HorizontalAlignment="Center" Margin="0,0,50,0" Name="Label1" VerticalAlignment="Center" Width="78" Target="{Binding ElementName=BetAmountLabel}" />
+      <Label Height="28" HorizontalAlignment="Center" Margin="50,0,0,0" Name="BetAmountLabel" VerticalAlignment="Center" Width="48" DataContext="{Binding}" Target="{Binding StringFormat=\{0:c\}}" />
     </Grid>
     <Label Content="Dealer" Height="33" HorizontalAlignment="Center" Name="DealerLabel" VerticalAlignment="Top" Width="60" FontSize="18" />
+    <Label Content="Bank:" Height="28" HorizontalAlignment="Left" Margin="15,456,0,0" Name="label2" VerticalAlignment="Top" Width="36" />
+    <Label Height="28" HorizontalAlignment="Left" Margin="57,456,0,0" Name="BankAmountLabel" VerticalAlignment="Top" Width="53" Target="{Binding StringFormat=\{0:c\}}" />
   </Grid>
 </Page>

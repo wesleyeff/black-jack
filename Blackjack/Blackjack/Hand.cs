@@ -62,6 +62,11 @@ namespace Blackjack
       return Cards.Count == 2 && GetPoints() == 21;
     }
 
+    public bool IsBust()
+    {
+      return GetPoints() > 21;
+    }
+
     public bool IsFlush()
     {
       Suit suit = Cards[0].Suit;

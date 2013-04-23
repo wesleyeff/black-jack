@@ -53,6 +53,10 @@ namespace Blackjack
         hand.Add(Cards[0]);
         Cards.RemoveAt(0);
       }
+      //if the deck is getting low, shuffle in the discard pile
+      if (Cards.Count() < 20)
+        Shuffle();
+
       return hand;
     }
 
