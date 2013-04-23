@@ -22,6 +22,7 @@ namespace Blackjack
     private Deck deck;
     private Dealer dealer;
     private Human human;
+    private int bet_amount;
 
     public GameBoard()
     {
@@ -43,6 +44,8 @@ namespace Blackjack
       DealButton.IsEnabled = true;
       HitButton.IsEnabled = false;
       StandButton.IsEnabled = false;
+
+      bet_amount = 0;
     }
 
     private void GetReadyToPlayHand()
@@ -139,8 +142,33 @@ namespace Blackjack
 
     private void UpdateBankAndBetAmount()
     {
-      BetAmountLabel.Content = human.CurrentBet;
-      BankAmountLabel.Content = human.Bank;
+//      BetAmountLabel.Content = human.CurrentBet;
+//      BankAmountLabel.Content = human.Bank;
+    }
+
+    private void BetButton_Click(object sender, RoutedEventArgs e)
+    {
+        Console.WriteLine(bet_amount);
+        human.Bet(bet_amount);
+    }
+
+    private void bet_one_Click(object sender, RoutedEventArgs e)
+    {
+        bet_amount += 1;
+        Console.WriteLine(bet_amount);
+        textBox1.Text = bet_amount.ToString();
+    }
+
+    private void bet_five_Click(object sender, RoutedEventArgs e)
+    {
+        bet_amount += 5;
+        Console.WriteLine(bet_amount);
+        textBox1.Text = bet_amount.ToString();
+    }
+
+    private void textBox1_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        bet_amount = Convert.ToInt32(textBox1.Text);
     }
   }
 }
