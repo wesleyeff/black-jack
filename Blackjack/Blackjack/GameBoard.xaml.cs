@@ -227,7 +227,16 @@ namespace Blackjack
 
     private void BetTextbox_TextChanged(object sender, TextChangedEventArgs e)
     {
-      betAmount = Convert.ToInt32(BetTextbox.Text);
+ //        bet_amount = Convert.ToInt32(textBox1.Text);
+ //        textBox2.Text = human.Bank.ToString();
+        string Str = BetTextbox.Text.Trim();
+        double Num;
+        bool isNum = double.TryParse(Str, out Num);
+        if (isNum)
+            betAmount = Convert.ToInt32(Str);
+        else
+            MessageBox.Show("Invalid number");
+
     }
   }
 }
