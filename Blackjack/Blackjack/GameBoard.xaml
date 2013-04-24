@@ -6,20 +6,21 @@
       mc:Ignorable="d" Title="GameBoard" d:DesignHeight="600" d:DesignWidth="700">
 
   <Grid Background="DarkGreen">
-        <Grid Width="600">
+        <Grid Width="700" Height="600">
             <StackPanel Height="100" HorizontalAlignment="Center" Width="Auto" Margin="0,305,0,0" Name="HumanPanel" VerticalAlignment="Top" Orientation="Horizontal" />
             <StackPanel Height="100" HorizontalAlignment="Center" Width="Auto" Margin="0,80,0,0" Name="DealerPanel" VerticalAlignment="Top" Orientation="Horizontal" />
-            <Button Content="Bet" HorizontalAlignment="Left" Margin="44,439,0,74" Name="BetButton" Width="131" Click="BetButton_Click" />
-            <Button Content="1" Height="23" HorizontalAlignment="Left" Margin="44,532,0,0" Name="bet_one" VerticalAlignment="Top" Width="52" Click="bet_one_Click" />
-            <Button Content="5" Height="23" HorizontalAlignment="Left" Margin="123,533,0,0" Name="bet_five" VerticalAlignment="Top" Width="52" Click="bet_five_Click" />
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="203,533,0,0" Name="textBox1" VerticalAlignment="Top" Width="54" TextChanged="textBox1_TextChanged" />
-            <Button Content="Stand" Height="35" HorizontalAlignment="Left" Margin="486,526,0,0" Name="StandButton" VerticalAlignment="Top" Width="75" />
-            <Button Content="Hit" Height="35" HorizontalAlignment="Left" Margin="384,526,0,0" Name="HitButton" VerticalAlignment="Top" Width="75" Click="HitButton_Click" />
-            <Button Content="Deal" Height="35" HorizontalAlignment="Left" Margin="285,526,0,0" Name="DealButton" VerticalAlignment="Top" Width="75" Click="DealButton_Click" />
+            <Button Content="Bet" HorizontalAlignment="Left" Margin="167,443,0,73" Name="BetButton" Width="131" Click="BetButton_Click" />
+            <Button Content="+1" Height="23" HorizontalAlignment="Left" Margin="167,536,0,0" Name="bet_one" VerticalAlignment="Top" Width="52" Click="bet_one_Click" />
+            <Button Content="+5" Height="23" HorizontalAlignment="Left" Margin="246,536,0,0" Name="bet_five" VerticalAlignment="Top" Width="52" Click="bet_five_Click" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="70,504,0,0" Name="textBox1" VerticalAlignment="Top" Width="54" TextChanged="textBox1_TextChanged" />
+            <Button Content="Stand" Height="35" HorizontalAlignment="Left" Margin="590,495,0,0" Name="StandButton" VerticalAlignment="Top" Width="75" />
+            <Button Content="Hit" Height="35" HorizontalAlignment="Left" Margin="486,495,0,0" Name="HitButton" VerticalAlignment="Top" Width="75" Click="HitButton_Click" />
+            <Button Content="Deal" Height="35" HorizontalAlignment="Left" Margin="379,495,0,0" Name="DealButton" VerticalAlignment="Top" Width="75" Click="DealButton_Click" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="70,461,0,0" Name="textBox2" VerticalAlignment="Top" Width="54" TextChanged="textBox2_TextChanged" />
         </Grid>
         <Button Content="Exit" Height="25" HorizontalAlignment="Left" Margin="10,10,0,0" Name="ExitButton" VerticalAlignment="Top" Width="41" Click="ExitButton_Click" />
     <Label Content="Dealer" Height="33" HorizontalAlignment="Center" Name="DealerLabel" VerticalAlignment="Top" Width="60" FontSize="18" />
-    <Label Content="Bank:" Height="28" HorizontalAlignment="Left" Margin="15,456,0,0" Name="label2" VerticalAlignment="Top" Width="36" />
-    <Label Height="28" HorizontalAlignment="Left" Margin="57,456,0,0" Name="BankAmountLabel" VerticalAlignment="Top" Width="53" Target="{Binding StringFormat=\{0:c\}}" />
-  </Grid>
+    <Label Content="Bank:" Height="28" HorizontalAlignment="Left" Margin="15,459,0,0" Name="label2" VerticalAlignment="Top" Width="36" />
+        <Label Content="Bet:" Height="28" HorizontalAlignment="Left" Margin="15,502,0,0" Name="label1" VerticalAlignment="Top" Width="36" />
+    </Grid>
 </Page>
