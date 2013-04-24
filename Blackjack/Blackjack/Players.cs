@@ -54,17 +54,22 @@ namespace Blackjack
       CurrentBet = 0;
     }
 
-    public void FinishHand(bool win)
+    public void FinishHand(bool? win)
     {
-      if (win)
+      if (win != null) // make sure it's not a tie
       {
-        if (Hand.IsBlackjack())
-          Bank += ( CurrentBet * 3 );
+        if ((bool)win)
+        {
+          if (Hand.IsBlackjack())
+            Bank += (CurrentBet * 3);
+          else
+            Bank += (CurrentBet * 2);
+          CurrentBet = 0;
+        }
         else
-          Bank += ( CurrentBet * 2 );
+          CurrentBet = 0;
       }
       //Reset the bet amount and discard hand
-      CurrentBet = 0;
       Hand.Discard(Deck);
     }
 

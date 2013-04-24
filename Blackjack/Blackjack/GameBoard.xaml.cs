@@ -22,7 +22,7 @@ namespace Blackjack
     private Deck deck;
     private Dealer dealer;
     private Human human;
-    private int bet_amount;
+    private int betAmount;
 
     public GameBoard()
     {
@@ -39,21 +39,23 @@ namespace Blackjack
       GetReadyToBet();
 
 
-      bet_amount = 0;
-      textBox1.Text = bet_amount.ToString();
-      textBox2.Text = human.Bank.ToString();
+      betAmount = 0;
+      BetTextbox.Text = betAmount.ToString();
+      BankTextbox.Text = human.Bank.ToString();
     }
 
     private void GetReadyToBet()
     {
-        DealButton.IsEnabled = false;
-        HitButton.IsEnabled = false;
-        StandButton.IsEnabled = false;
-        human.Discard();
-        dealer.Discard();
-        DisplayHandCards(HumanPanel, human.Hand);
-        DisplayHandCards(DealerPanel, dealer.Hand);
-        BetButton.IsEnabled = true;
+      DealButton.IsEnabled = false;
+      HitButton.IsEnabled = false;
+      StandButton.IsEnabled = false;
+      human.Discard();
+      dealer.Discard();
+      DisplayHandCards(HumanPanel, human.Hand);
+      DisplayHandCards(DealerPanel, dealer.Hand);
+      BetButton.IsEnabled = true;
+      betAmount = human.CurrentBet;
+      BetTextbox.Text = betAmount.ToString();
     }
 
     private void GetReadyToDeal()
@@ -79,24 +81,24 @@ namespace Blackjack
 
     private void DealButton_Click(object sender, RoutedEventArgs e)
     {
-        //deal 2 cards to each player
-        human.Hand.Add(deck.Deal(2));
+      //deal 2 cards to each player
+      human.Hand.Add(deck.Deal(2));
       dealer.Hand.Add(deck.Deal(2));
-      
+
       DisplayHandCards(HumanPanel, human.Hand);
       DisplayHandCards(DealerPanel, dealer.Hand);
 
       if (human.Hand.IsBlackjack() && dealer.Hand.IsBlackjack())
       {
-          // push
+        // push
       }
       if (human.Hand.IsBlackjack())
       {
-          human.FinishHand(true);
+        human.FinishHand(true);
       }
       if (dealer.Hand.IsBlackjack())
       {
-          human.FinishHand(false);
+        human.FinishHand(false);
       }
 
       //make the hit/stand buttons available and disable the deal button
@@ -105,7 +107,7 @@ namespace Blackjack
 
     private void PlayDealerHand()
     {
-        Console.WriteLine("Dealer playing");
+      Console.WriteLine("Dealer playing");
       dealer.PlayHand();
       DisplayHandCards(DealerPanel, dealer.Hand);
     }
@@ -130,23 +132,13 @@ namespace Blackjack
 
     private void HitButton_Click(object sender, RoutedEventArgs e)
     {
-        human.Hit();
-        if (human.Hand.IsBust())
-        {
-            human.FinishHand(false);
-            GetReadyToBet();
-        }
-      DisplayHandCards(HumanPanel, human.Hand);
-    }
-
-    private void FinishHand(bool win)
-    {
-        human.FinishHand(win);
-        UpdateBankAndBetAmount();
-        dealer.Discard();
-        DisplayHandCards(DealerPanel, dealer.Hand);
-        DisplayHandCards(HumanPanel, human.Hand);
+      human.Hit();
+      if (human.Hand.IsBust())
+      {
+        human.FinishHand(false);
         GetReadyToBet();
+      }
+      DisplayHandCards(HumanPanel, human.Hand);
     }
 
     private void StandButton_Click(object sender, RoutedEventArgs e)
@@ -156,85 +148,86 @@ namespace Blackjack
       //Play the dealer's hand
       PlayDealerHand();
 
-
       if (human.IsStanding && dealer.IsStanding)
       {
-          CompareHands();
+        CompareHands();
       }
     }
 
     private void CompareHands()
     {
-        if ((human.Hand.IsBust()) || (human.Hand.IsBlackjack() && dealer.Hand.IsBlackjack()) || (human.Hand.GetPoints() == dealer.Hand.GetPoints()))
+      if ((human.Hand.IsBust()) || (human.Hand.IsBlackjack() && dealer.Hand.IsBlackjack()) || (human.Hand.GetPoints() == dealer.Hand.GetPoints()))
+      {
+        if (MainWindow.tie == Tie.Push)
         {
-            if (MainWindow.tie == Tie.Push)
-            {
-                // You Pushed
-            }
-            else if (MainWindow.tie == Tie.Dealer)
-            {
-                FinishHand(false);
-            }
-            else // Player
-            {
-                FinishHand(true);
-            }
+          // do the push
+          FinishHand(null);
         }
-        else if (human.Hand.IsBust() || dealer.Hand.IsBlackjack())
+        else if (MainWindow.tie == Tie.Dealer)
         {
-            //human loses
-            FinishHand(false);
+          FinishHand(false);
         }
-        else if (human.Hand.GetPoints() > dealer.Hand.GetPoints() || dealer.Hand.IsBust())
+        else // Player
         {
-            //human wins
-            FinishHand(true);
+          FinishHand(true);
         }
-        else
-        {
-            //human loses
-            FinishHand(false);
-        }
+      }
+      else if (human.Hand.IsBust() || dealer.Hand.IsBlackjack())
+      {
+        //human loses
+        FinishHand(false);
+      }
+      else if (human.Hand.GetPoints() > dealer.Hand.GetPoints() || dealer.Hand.IsBust())
+      {
+        //human wins
+        FinishHand(true);
+      }
+      else
+      {
+        //human loses
+        FinishHand(false);
+      }
+    }
+
+    private void FinishHand(bool? win)
+    {
+      human.FinishHand(win);
+      UpdateBankAndBetAmount();
+      dealer.Discard();
+      DisplayHandCards(DealerPanel, dealer.Hand);
+      DisplayHandCards(HumanPanel, human.Hand);
+      GetReadyToBet();
     }
 
     private void UpdateBankAndBetAmount()
     {
-      textBox1.Text = human.CurrentBet.ToString();
-      textBox2.Text = human.Bank.ToString();
+      BetTextbox.Text = human.CurrentBet.ToString();
+      BankTextbox.Text = human.Bank.ToString();
     }
 
     private void BetButton_Click(object sender, RoutedEventArgs e)
     {
-//        Console.WriteLine(bet_amount);
-        human.Bet(bet_amount);
-        UpdateBankAndBetAmount();
-        bet_amount = 0;
-        GetReadyToDeal();
+      human.Bet(betAmount);
+      UpdateBankAndBetAmount();
+      betAmount = 0;
+      GetReadyToDeal();
     }
 
     private void bet_one_Click(object sender, RoutedEventArgs e)
     {
-        bet_amount += 1;
-//        Console.WriteLine(bet_amount);
-        textBox1.Text = bet_amount.ToString();
+      betAmount += 1;
+      BetTextbox.Text = betAmount.ToString();
     }
 
     private void bet_five_Click(object sender, RoutedEventArgs e)
     {
-        bet_amount += 5;
-//        Console.WriteLine(bet_amount);
-        textBox1.Text = bet_amount.ToString();
+      betAmount += 5;
+      BetTextbox.Text = betAmount.ToString();
     }
 
-    private void textBox1_TextChanged(object sender, TextChangedEventArgs e)
+    private void BetTextbox_TextChanged(object sender, TextChangedEventArgs e)
     {
-        bet_amount = Convert.ToInt32(textBox1.Text);
-//        textBox2.Text = human.Bank.ToString();
-    }
-
-    private void textBox2_TextChanged(object sender, TextChangedEventArgs e)
-    {
-
+      betAmount = Convert.ToInt32(BetTextbox.Text);
     }
   }
 }
