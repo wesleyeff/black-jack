@@ -21,7 +21,7 @@ namespace Blackjack
     {
          int decks = 0;
          bool softdeal = false;
-         string tie;
+         Tie tie;
 
         public Options()
         {
@@ -39,17 +39,17 @@ namespace Blackjack
 
         private void radioButton1_Checked_1(object sender, RoutedEventArgs e)
         {
-            tie = "dealer";
+            tie = Tie.Dealer;
         }
 
         private void radioButton2_Checked(object sender, RoutedEventArgs e)
         {
-            tie = "player";
+            tie = Tie.Human;
         }
 
         private void radioButton3_Checked(object sender, RoutedEventArgs e)
         {
-            tie = "push";
+            tie = Tie.Push;
         }
 
         private void radioButton4_Checked(object sender, RoutedEventArgs e)

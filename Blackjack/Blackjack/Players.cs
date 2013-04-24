@@ -37,6 +37,7 @@ namespace Blackjack
       while (Hand.GetPoints() < 17) // for now just hit until the total is >= 17
       {
         Hit();
+        Console.WriteLine("Hit!");
       }
       IsStanding = true;
     }
@@ -58,12 +59,10 @@ namespace Blackjack
       if (win)
       {
         if (Hand.IsBlackjack())
-          Bank += (CurrentBet * 2);
+          Bank += ( CurrentBet * 3 );
         else
-          Bank += CurrentBet;
+          Bank += ( CurrentBet * 2 );
       }
-      else
-        Bank -= CurrentBet;
       //Reset the bet amount and discard hand
       CurrentBet = 0;
       Hand.Discard(Deck);

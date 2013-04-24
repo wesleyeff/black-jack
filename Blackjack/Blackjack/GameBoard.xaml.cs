@@ -105,6 +105,7 @@ namespace Blackjack
 
     private void PlayDealerHand()
     {
+        Console.WriteLine("Dealer playing");
       dealer.PlayHand();
       DisplayHandCards(DealerPanel, dealer.Hand);
     }
@@ -138,6 +139,16 @@ namespace Blackjack
       DisplayHandCards(HumanPanel, human.Hand);
     }
 
+    private void FinishHand(bool win)
+    {
+        human.FinishHand(win);
+        UpdateBankAndBetAmount();
+        dealer.Discard();
+        DisplayHandCards(DealerPanel, dealer.Hand);
+        DisplayHandCards(HumanPanel, human.Hand);
+        GetReadyToBet();
+    }
+
     private void StandButton_Click(object sender, RoutedEventArgs e)
     {
       human.IsStanding = true;
@@ -149,7 +160,6 @@ namespace Blackjack
       if (human.IsStanding && dealer.IsStanding)
       {
           CompareHands();
-
       }
     }
 
@@ -157,43 +167,48 @@ namespace Blackjack
     {
         if ((human.Hand.IsBust()) || (human.Hand.IsBlackjack() && dealer.Hand.IsBlackjack()) || (human.Hand.GetPoints() == dealer.Hand.GetPoints()))
         {
-            //it's a tie, do something
+            if (MainWindow.tie == Tie.Push)
+            {
+                // You Pushed
+            }
+            else if (MainWindow.tie == Tie.Dealer)
+            {
+                FinishHand(false);
+            }
+            else // Player
+            {
+                FinishHand(true);
+            }
         }
         else if (human.Hand.IsBust() || dealer.Hand.IsBlackjack())
         {
             //human loses
-            human.FinishHand(false);
+            FinishHand(false);
         }
         else if (human.Hand.GetPoints() > dealer.Hand.GetPoints() || dealer.Hand.IsBust())
         {
             //human wins
-            human.FinishHand(true);
+            FinishHand(true);
         }
         else
         {
             //human loses
-            human.FinishHand(false);
+            FinishHand(false);
         }
-        UpdateBankAndBetAmount();
-        dealer.Discard();
-        DisplayHandCards(DealerPanel, dealer.Hand);
-        DisplayHandCards(HumanPanel, human.Hand);
-        GetReadyToDeal();
     }
 
     private void UpdateBankAndBetAmount()
     {
-      textBox2.Text = human.CurrentBet.ToString();
-      textBox1.Text = human.Bank.ToString();
+      textBox1.Text = human.CurrentBet.ToString();
+      textBox2.Text = human.Bank.ToString();
     }
 
     private void BetButton_Click(object sender, RoutedEventArgs e)
     {
 //        Console.WriteLine(bet_amount);
         human.Bet(bet_amount);
-        textBox2.Text = human.Bank.ToString();
+        UpdateBankAndBetAmount();
         bet_amount = 0;
-        textBox1.Text = bet_amount.ToString();
         GetReadyToDeal();
     }
 
@@ -214,7 +229,7 @@ namespace Blackjack
     private void textBox1_TextChanged(object sender, TextChangedEventArgs e)
     {
         bet_amount = Convert.ToInt32(textBox1.Text);
-        textBox2.Text = human.Bank.ToString();
+//        textBox2.Text = human.Bank.ToString();
     }
 
     private void textBox2_TextChanged(object sender, TextChangedEventArgs e)

@@ -16,11 +16,16 @@ namespace Blackjack
     /// <summary>
     /// Interaction logic for Options.xaml
     /// </summary>
+    /// 
+
+    public enum Tie : byte { Push, Human, Dealer }
+
     public partial class MainWindow : Window
     {
         public static int decks = 1;
         public static bool softdeal = true;
-        public static string tie = "dealer";
+        public static Tie tie;
+        
 
         public MainWindow()
         {
