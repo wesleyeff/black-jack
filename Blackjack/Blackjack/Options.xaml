@@ -6,9 +6,9 @@
         <Button Content="Save" Height="97" HorizontalAlignment="Left" Margin="286,282,0,0" Name="button1" VerticalAlignment="Top" Width="85" Click="button1_Click" />
         <GroupBox Header="Tie Hand Goes to" Height="142" HorizontalAlignment="Left" Margin="44,117,0,0" Name="groupBox1" VerticalAlignment="Top" Width="200">
             <Grid>
-                <RadioButton Content="Dealer" Height="16" HorizontalAlignment="Left" Margin="17,20,0,0" Name="radioButton1" VerticalAlignment="Top" Checked="radioButton1_Checked_1" IsChecked="True" />
+                <RadioButton Content="Dealer" Height="16" HorizontalAlignment="Left" Margin="17,20,0,0" Name="radioButton1" VerticalAlignment="Top" Checked="radioButton1_Checked_1"/>
                 <RadioButton Content="Player" Height="16" HorizontalAlignment="Left" Margin="17,42,0,0" Name="radioButton2" VerticalAlignment="Top" Checked="radioButton2_Checked" />
-                <RadioButton Content="Push" Height="16" HorizontalAlignment="Left" Margin="17,64,0,0" Name="radioButton3" VerticalAlignment="Top" Checked="radioButton3_Checked" />
+                <RadioButton Content="Push" Height="16" HorizontalAlignment="Left" Margin="17,64,0,0" Name="radioButton3" VerticalAlignment="Top" Checked="radioButton3_Checked" IsChecked="True"/>
             </Grid>
         </GroupBox>
         <GroupBox Header="Dealer must hit soft 17" Height="138" HorizontalAlignment="Left" Margin="286,121,0,0" Name="groupBox2" VerticalAlignment="Top" Width="206">
