@@ -19,13 +19,23 @@ namespace Blackjack
     /// </summary>
     public partial class Options : Window
     {
-         int decks = 0;
-         bool softdeal = false;
-         Tie tie;
+         int decks = MainWindow.decks;
+         bool softdeal = MainWindow.softdeal;
+         Tie tie = MainWindow.tie;
+
+        
 
         public Options()
         {
             InitializeComponent();
+            if (decks == 1) { radioButton6.IsChecked = true; }
+            if (decks == 2) { radioButton7.IsChecked = true; }
+            if (decks == 5) { radioButton8.IsChecked = true; }
+            if (softdeal == true) { radioButton4.IsChecked = true; }
+              else { radioButton5.IsChecked = true; }
+            if (tie == Tie.Dealer) { radioButton1.IsChecked = true; }
+            if (tie == Tie.Human) { radioButton2.IsChecked = true; }
+            if (tie == Tie.Push) { radioButton3.IsChecked = true; }
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -79,12 +89,6 @@ namespace Blackjack
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            radioButton1.IsChecked = true;
-            radioButton4.IsChecked = true;
-            radioButton6.IsChecked = true;
-            MainWindow.decks = decks;
-            MainWindow.softdeal = softdeal;
-            MainWindow.tie = tie;
             this.Close();
         }
     }

@@ -8,7 +8,7 @@
             <Grid>
                 <RadioButton Content="Dealer" Height="16" HorizontalAlignment="Left" Margin="17,20,0,0" Name="radioButton1" VerticalAlignment="Top" Checked="radioButton1_Checked_1"/>
                 <RadioButton Content="Player" Height="16" HorizontalAlignment="Left" Margin="17,42,0,0" Name="radioButton2" VerticalAlignment="Top" Checked="radioButton2_Checked" />
-                <RadioButton Content="Push" Height="16" HorizontalAlignment="Left" Margin="17,64,0,0" Name="radioButton3" VerticalAlignment="Top" Checked="radioButton3_Checked" IsChecked="True"/>
+                <RadioButton Content="Push" Height="16" HorizontalAlignment="Left" Margin="17,64,0,0" Name="radioButton3" VerticalAlignment="Top" Checked="radioButton3_Checked"/>
             </Grid>
         </GroupBox>
         <GroupBox Header="Dealer must hit soft 17" Height="138" HorizontalAlignment="Left" Margin="286,121,0,0" Name="groupBox2" VerticalAlignment="Top" Width="206">
@@ -21,13 +21,13 @@
                     <ColumnDefinition Width="19*" />
                     <ColumnDefinition Width="175*" />
                 </Grid.ColumnDefinitions>
-                <RadioButton Content="Yes" Height="16" HorizontalAlignment="Left" Margin="28,16,0,0" Name="radioButton4" VerticalAlignment="Top" Grid.Column="1" Width="82" Checked="radioButton4_Checked" IsChecked="True" />
+                <RadioButton Content="Yes" Height="16" HorizontalAlignment="Left" Margin="28,16,0,0" Name="radioButton4" VerticalAlignment="Top" Grid.Column="1" Width="82" Checked="radioButton4_Checked"/>
                 <RadioButton Content="No" Height="16" HorizontalAlignment="Left" Margin="28,47,0,0" Name="radioButton5" VerticalAlignment="Top" Grid.Column="1" Grid.RowSpan="2" Checked="radioButton5_Checked" />
             </Grid>
         </GroupBox>
         <GroupBox Header="Number of Decks" Height="114" HorizontalAlignment="Left" Margin="44,265,0,0" Name="groupBox3" VerticalAlignment="Top" Width="200">
             <Grid>
-                <RadioButton Content="1" Height="16" HorizontalAlignment="Left" Margin="17,17,0,0" Name="radioButton6" VerticalAlignment="Top" Checked="radioButton6_Checked" IsChecked="True" />
+                <RadioButton Content="1" Height="16" HorizontalAlignment="Left" Margin="17,17,0,0" Name="radioButton6" VerticalAlignment="Top" Checked="radioButton6_Checked"/>
                 <RadioButton Content="2" Height="16" HorizontalAlignment="Left" Margin="17,39,0,0" Name="radioButton7" VerticalAlignment="Top" Checked="radioButton7_Checked" />
                 <RadioButton Content="5" Height="16" HorizontalAlignment="Left" Margin="17,61,0,0" Name="radioButton8" VerticalAlignment="Top" Checked="radioButton8_Checked" />
             </Grid>
