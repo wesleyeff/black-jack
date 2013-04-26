@@ -30,14 +30,15 @@ namespace Blackjack
 
   public class Dealer : Player
   {
-    public Dealer(Hand hand, Deck deck) : base(hand, deck) { }
+    public Dealer(Hand hand, Deck deck) : base(hand, deck) { FaceDown = true; }
+    public bool FaceDown { get;  set; }
 
     public void PlayHand()
     {
-      while (Hand.GetPoints() < 17) // for now just hit until the total is >= 17
+        FaceDown = false;
+      while ((MainWindow.softdeal && Hand.GetPoints() == 17 && Hand.HasAce()) || Hand.GetPoints() < 17) // for now just hit until the total is >= 17
       {
         Hit();
-        Console.WriteLine("Hit!");
       }
       IsStanding = true;
     }
@@ -64,12 +65,10 @@ namespace Blackjack
             Bank += (CurrentBet * 3);
           else
             Bank += (CurrentBet * 2);
-          CurrentBet = 0;
         }
-        else
-          CurrentBet = 0;
       }
       //Reset the bet amount and discard hand
+      CurrentBet = 0;
       Hand.Discard(Deck);
     }
 

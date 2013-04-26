@@ -57,6 +57,17 @@ namespace Blackjack
       Cards.Clear();
     }
 
+    public bool HasAce()
+    {
+        foreach (Card c in Cards)
+        {
+            if (c.Rank == Rank.Ace) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public bool IsBlackjack()
     {
       return Cards.Count == 2 && GetPoints() == 21;

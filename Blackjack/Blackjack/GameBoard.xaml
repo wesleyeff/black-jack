@@ -9,7 +9,7 @@
         <Grid Width="700" Height="600">
             <StackPanel Height="100" HorizontalAlignment="Center" Width="Auto" Margin="0,305,0,0" Name="HumanPanel" VerticalAlignment="Top" Orientation="Horizontal" />
             <StackPanel Height="100" HorizontalAlignment="Center" Width="Auto" Margin="0,80,0,0" Name="DealerPanel" VerticalAlignment="Top" Orientation="Horizontal" />
-            <Button Content="Bet" HorizontalAlignment="Left" Margin="167,443,0,73" Name="BetButton" Width="131" Click="BetButton_Click" />
+            <Button Content="Place Bet" HorizontalAlignment="Left" Margin="167,443,0,73" Name="BetButton" Width="131" Click="BetButton_Click" />
             <Button Content="+1" Height="23" HorizontalAlignment="Left" Margin="167,536,0,0" Name="bet_one" VerticalAlignment="Top" Width="52" Click="bet_one_Click" />
             <Button Content="+5" Height="23" HorizontalAlignment="Left" Margin="246,536,0,0" Name="bet_five" VerticalAlignment="Top" Width="52" Click="bet_five_Click" />
             <TextBox Height="23" HorizontalAlignment="Left" Margin="70,504,0,0" Name="BetTextbox" VerticalAlignment="Top" Width="54" TextChanged="BetTextbox_TextChanged" />

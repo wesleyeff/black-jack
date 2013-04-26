@@ -49,11 +49,11 @@ namespace Blackjack
       DealButton.IsEnabled = false;
       HitButton.IsEnabled = false;
       StandButton.IsEnabled = false;
+      BetButton.IsEnabled = false;
       human.Discard();
       dealer.Discard();
-      DisplayHandCards(HumanPanel, human.Hand);
-      DisplayHandCards(DealerPanel, dealer.Hand);
-      BetButton.IsEnabled = true;
+      DisplayHandCards(HumanPanel, human);
+      DisplayHandCards(DealerPanel, dealer);
       betAmount = human.CurrentBet;
       BetTextbox.Text = betAmount.ToString();
     }
@@ -64,6 +64,7 @@ namespace Blackjack
       HitButton.IsEnabled = false;
       StandButton.IsEnabled = false;
       BetButton.IsEnabled = false;
+      dealer.FaceDown = true;
     }
 
     private void GetReadyToPlayHand()
@@ -85,60 +86,79 @@ namespace Blackjack
       human.Hand.Add(deck.Deal(2));
       dealer.Hand.Add(deck.Deal(2));
 
-      DisplayHandCards(HumanPanel, human.Hand);
-      DisplayHandCards(DealerPanel, dealer.Hand);
+      DisplayHandCards(HumanPanel, human);
+      DisplayHandCards(DealerPanel, dealer);
 
       if (human.Hand.IsBlackjack() && dealer.Hand.IsBlackjack())
       {
         // push
+          DisplayMessageBox("Do The Push!");
+          FinishHand(null);
       }
-      if (human.Hand.IsBlackjack())
+      else if (human.Hand.IsBlackjack())
       {
-        human.FinishHand(true);
+          DisplayMessageBox("Black Jack!! You Win!");
+          FinishHand(true);
       }
-      if (dealer.Hand.IsBlackjack())
+      else if (dealer.Hand.IsBlackjack())
       {
-        human.FinishHand(false);
+          dealer.FaceDown = false;
+          DisplayHandCards(DealerPanel, dealer);
+          DisplayMessageBox("The dealer killed you dead.");
+        FinishHand(false);
       }
-
       //make the hit/stand buttons available and disable the deal button
-      GetReadyToPlayHand();
+      else
+        GetReadyToPlayHand();
     }
 
     private void PlayDealerHand()
     {
       Console.WriteLine("Dealer playing");
       dealer.PlayHand();
-      DisplayHandCards(DealerPanel, dealer.Hand);
+      DisplayHandCards(DealerPanel, dealer);
     }
 
-    private void DisplayHandCards(StackPanel panel, Hand hand)
+    private void DisplayHandCards(StackPanel panel, Player player)
     {
+      string path;
       panel.Children.Clear();
       Image image;
       BitmapImage src;
-      foreach (Card c in hand.Cards)
+      for (int i = 0; i < player.Hand.Cards.Count; i++)
       {
-        image = new Image();
-        src = new BitmapImage();
-        src.BeginInit();
-        src.UriSource = new Uri(c.Path, UriKind.Relative);
-        src.CacheOption = BitmapCacheOption.OnLoad;
-        src.EndInit();
-        image.Source = src;
-        panel.Children.Add(image);
+          if (i == 0 && player.GetType() == typeof(Dealer) && ((Dealer)player).FaceDown)
+          {
+              path = "Images/Cards/Card-Back.png";
+          }
+          else
+              path = player.Hand.Cards[i].Path;
+          image = new Image();
+          src = new BitmapImage();
+          src.BeginInit();
+          src.UriSource = new Uri(path, UriKind.Relative);
+          src.CacheOption = BitmapCacheOption.OnLoad;
+          src.EndInit();
+          image.Source = src;
+          panel.Children.Add(image);
+      }
+
+      foreach (Card c in player.Hand.Cards)
+      {
+        
       }
     }
 
     private void HitButton_Click(object sender, RoutedEventArgs e)
     {
-      human.Hit();
+        human.Hit();
+        DisplayHandCards(HumanPanel, human);
       if (human.Hand.IsBust())
       {
+          DisplayMessageBox("Busted!");
         human.FinishHand(false);
         GetReadyToBet();
       }
-      DisplayHandCards(HumanPanel, human.Hand);
     }
 
     private void StandButton_Click(object sender, RoutedEventArgs e)
@@ -161,32 +181,44 @@ namespace Blackjack
         if (MainWindow.tie == Tie.Push)
         {
           // do the push
+            DisplayMessageBox("Do The Push!");
           FinishHand(null);
         }
         else if (MainWindow.tie == Tie.Dealer)
         {
+            DisplayMessageBox("Tie goes to Dealer!");
           FinishHand(false);
         }
         else // Player
         {
+            DisplayMessageBox("Tie goes to You(The Player)!");
           FinishHand(true);
         }
       }
       else if (human.Hand.IsBust() || dealer.Hand.IsBlackjack())
       {
         //human loses
+          DisplayMessageBox("You are the worst!");
         FinishHand(false);
       }
       else if (human.Hand.GetPoints() > dealer.Hand.GetPoints() || dealer.Hand.IsBust())
       {
         //human wins
+          DisplayMessageBox("You Are The Best!");
         FinishHand(true);
       }
       else
       {
         //human loses
+          DisplayMessageBox("You are still the worst!");
         FinishHand(false);
       }
+    }
+
+    private void DisplayMessageBox(string msg)
+    {
+        MessageBoxButton mb = MessageBoxButton.OK;
+        MessageBox.Show(msg, "Attention!", mb);
     }
 
     private void FinishHand(bool? win)
@@ -194,8 +226,8 @@ namespace Blackjack
       human.FinishHand(win);
       UpdateBankAndBetAmount();
       dealer.Discard();
-      DisplayHandCards(DealerPanel, dealer.Hand);
-      DisplayHandCards(HumanPanel, human.Hand);
+      DisplayHandCards(DealerPanel, dealer);
+      DisplayHandCards(HumanPanel, human);
       GetReadyToBet();
     }
 
@@ -230,13 +262,14 @@ namespace Blackjack
  //        bet_amount = Convert.ToInt32(textBox1.Text);
  //        textBox2.Text = human.Bank.ToString();
         string Str = BetTextbox.Text.Trim();
-        double Num;
-        bool isNum = double.TryParse(Str, out Num);
+        int Num;
+        bool isNum = int.TryParse(Str, out Num);
         if (isNum)
-            betAmount = Convert.ToInt32(Str);
+            betAmount = Num;
         else
             MessageBox.Show("Invalid number");
-
+        if (Num > 0)
+            BetButton.IsEnabled = true;
     }
   }
 }
