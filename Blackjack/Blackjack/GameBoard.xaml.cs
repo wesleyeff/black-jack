@@ -218,7 +218,7 @@ namespace Blackjack
     private void DisplayMessageBox(string msg)
     {
         MessageBoxButton mb = MessageBoxButton.OK;
-        MessageBox.Show(msg, "Attention!", mb);
+        MessageBox.Show(msg, "Achtung!", mb);
     }
 
     private void FinishHand(bool? win)
